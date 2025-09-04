@@ -14,11 +14,11 @@ public class Db {
   }
 
   public static Connection getConnection() throws SQLException {
-    String host = System.getenv().getOrDefault("DB_HOST", "103.221.222.68");
-    String port = System.getenv().getOrDefault("DB_PORT", "3306");
-    String db = System.getenv().getOrDefault("DB_NAME", "tqishhwy_zalo");
-    String user = System.getenv().getOrDefault("DB_USER", "tqishhwy_zalo");
-    String pass = System.getenv().getOrDefault("DB_PASS", "tqishhwy_zalo");
+    String host = System.getenv().getOrDefault("DB_HOST");
+    String port = System.getenv().getOrDefault("DB_PORT");
+    String db = System.getenv().getOrDefault("DB_NAME");
+    String user = System.getenv().getOrDefault("DB_USER");
+    String pass = System.getenv().getOrDefault("DB_PASS");
 
     String url =
         "jdbc:mysql://" + host + ":" + port + "/" + db +
